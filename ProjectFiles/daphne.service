@@ -1,0 +1,13 @@
+[Unit]
+Description=WebSocket Daphne Service
+After=network.target
+
+[Service]
+Type=simple
+User=USERNAME
+WorkingDirectory=/home/USERNAME/web
+ExecStart=/home/USERNAME/web/env/bin/python /home/USERNAME/web/env/bin/daphne -b 0.0.0.0 -p 8001 ChatServerPlayground.asgi:application
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
