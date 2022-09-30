@@ -6,8 +6,8 @@ After=network.target
 [Service]
 User=USERNAME
 Group=www-data
-WorkingDirectory=/home/USERNAME/web
-ExecStart=/home/USERNAME/web/env/bin/gunicorn \
+WorkingDirectory=/home/USERNAME/WebChatApp
+ExecStart=/home/USERNAME/WebChatApp/env/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
